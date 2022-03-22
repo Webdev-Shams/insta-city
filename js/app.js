@@ -152,7 +152,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
@@ -161,7 +161,7 @@ const displayReportedPosts = () => {
 const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
   posts = await data.json();
-  console.log(posts);
+  // console.log(posts);
   showPosts(posts);
 }
 
