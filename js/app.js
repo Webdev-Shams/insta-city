@@ -39,7 +39,6 @@ const switchTab = (id) => {
         document.getElementById( "liked" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
-
         displayLikedPosts();
     } else {
         document.getElementById( "reported" ).style.display = "block";
@@ -48,6 +47,7 @@ const switchTab = (id) => {
 
         displayReportedPosts();
     }
+
 };
 
 const createPost = (post) => {
@@ -161,7 +161,6 @@ const displayReportedPosts = () => {
 const loadPosts = async () =>{
   let data = await fetch('../data/posts.json');
   posts = await data.json();
-  // console.log(posts);
   showPosts(posts);
 }
 
